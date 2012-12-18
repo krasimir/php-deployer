@@ -1,0 +1,9 @@
+.centered {
+    text-align: center;
+}
+.big-title {
+    padding: 30px 0 20px 0;
+}
+.big-title h1 {
+    font-size: 50px;
+}

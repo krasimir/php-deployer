@@ -1,0 +1,17 @@
+[
+    { "path": "http://twitter.github.com/bootstrap/assets/bootstrap.zip", "name": "bootstrap" },
+    { "path": "http://code.jquery.com/jquery-1.8.2.min.js", "name": "jQuery" },
+    {
+        "owner": "krasimir",
+        "repository": "fabrico",
+        "branch": "master",
+        "modules": [
+            { "path": "src/core/ErrorHandler" },
+            { "path": "src/core/View" },
+            { "path": "src/core/Router" },
+            { "path": "src/core/DBAdapters" },
+            { "path": "src/core/SessionManager" }
+        ]
+    },
+    { "path": "http://underscorejs.org/underscore-min.js", "name": "underscore" }
+]
