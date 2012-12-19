@@ -70,6 +70,8 @@
                         die(view("layout.html", array(
                             "content" => view("application.html", array(
                                 "form" => "The application is saved successfully.",
+                                "revisions" => $this->revisions($record),
+                                "releases" => $this->releases($record),
                                 "id" => $id
                             )),
                             "nav" => view("nav.html")
@@ -78,6 +80,8 @@
                         die(view("layout.html", array(
                             "content" => view("application.html", array(
                                 "form" => $form->markup,
+                                "revisions" => $this->revisions($record),
+                                "releases" => $this->releases($record),
                                 "id" => $id
                             )),
                             "nav" => view("nav.html")
@@ -91,7 +95,25 @@
                 break;
             }
 
+        }
+        private function revisions($app) {
+
+            $destination = __DIR__."/..".$app->destination;            
             
+            switch($app->type) {
+                case "svn":
+                    if(!file_exists($destination.".svn")) {
+                        $output = array();
+                        // $cmd = "svn checkout --non-interactive --force ".$app->source." ".$destination." --username ".$app->user." --password ".$app->pass;
+                        // exec($cmd, $output);
+                        // var_dump($output);die();
+                    }
+                break;
+            }
+
+        }
+        private function releases($app) {
+
         }
     }
 ?>

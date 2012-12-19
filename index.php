@@ -30,12 +30,22 @@
         "pass" => PASS,
         "dbname" => DBNAME
     )); 
-    $mysql->defineContext("apps", array(
+    $mysql
+    ->defineContext("apps", array(
         "name" => "VARCHAR(250)",
         "source" => "VARCHAR(250)",
         "type" => "VARCHAR(50)",
         "user" => "VARCHAR(150)",
-        "pass" => "VARCHAR(150)"
+        "pass" => "VARCHAR(150)",
+        "destination" => "LONGTEXT"
+    ))
+    ->defineContext("releases", array(
+        "app" => "INT",
+        "revision" => "VARCHAR(250)",
+        "description" => "LONGTEXT",
+        "filesChanged" => "LONGTEXT",
+        "date" => "VARCHAR(150)",
+        "user" => "VARCHAR(150)"
     ));
 
     // routing
