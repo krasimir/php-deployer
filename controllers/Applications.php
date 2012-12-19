@@ -28,6 +28,11 @@
         "name" => "pass", 
         "label" => "Password:",
         "validation" => Former::validation()->NotEmpty()
+    ))
+    ->addTextBox(array(
+        "name" => "destination", 
+        "label" => "Destination (where to deploy the code):",
+        "validation" => Former::validation()->NotEmpty()
     ));
 
     class Applications {
