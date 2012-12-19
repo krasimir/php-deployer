@@ -1,0 +1,38 @@
+.former-element {
+    margin: 0 0 15px 0;
+}
+.former-element .clear {
+    clear: both;
+}
+.former-element label {
+    float: left;
+    width: 50%;
+}
+.former-element input, 
+.former-element textarea, 
+.former-element select {
+    width: 100%;
+}
+.form-element-controls {
+    width: 50%;
+    float: right;
+}
+.former-element .submit {
+    width: 100px;
+}
+.former-element .error {
+    padding: 10px;
+    border-radius: 5px;
+    background: #FFA3A3;
+    margin: 0 0 10px 0;
+}
+.former-element .boxes {
+    display: block;
+    float: right;
+}
+.former-element .radio {
+    width: auto;
+}
+.former-element .check {
+    width: auto;
+}

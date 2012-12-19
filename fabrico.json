@@ -10,7 +10,8 @@
             { "path": "src/core/View" },
             { "path": "src/core/Router" },
             { "path": "src/core/DBAdapters" },
-            { "path": "src/core/SessionManager" }
+            { "path": "src/core/SessionManager" },
+            { "path": "src/core/Former" }
         ]
     },
     { "path": "http://underscorejs.org/underscore-min.js", "name": "underscore" }

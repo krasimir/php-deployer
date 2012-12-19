@@ -11,15 +11,17 @@
         "View",
         "Router", 
         "DBAdapters/MySQL",
-        "SessionManager"
+        "SessionManager",
+        "Former"
     );
     $F->loadResource(
         "controllers/*",
         "config/*"
     );
 
-    // configuration of the template engine
+    // configuration of the template engine and Former
     View::$root = __DIR__."/templates/";
+    Former::templatesPath(__DIR__."/templates/former/");
 
     // database
     $mysql = new MySQLAdapter((object) array(
@@ -38,9 +40,11 @@
 
     // routing
     $router = new Router();
-    $router
-    ->register("/apps/add/store", array("RequireLogin", "Applications"))
+    $router    
+    ->register("/apps/delete/@id", array("RequireLogin", "Applications"))
     ->register("/apps/add", array("RequireLogin", "Applications"))
+    ->register("/apps/@id", array("RequireLogin", "Applications"))
+    ->register("/logout", "Logout")
     ->register("", array("RequireLogin", "Home"))
     ->run();
 

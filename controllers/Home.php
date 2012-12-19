@@ -10,7 +10,7 @@
             } else {
                 foreach($apps as $app) {
                     $appsMarkup .= view("list-link.html", array(
-                        "url" => "apps/manage/".$app->id,
+                        "url" => "apps/".$app->id,
                         "label" => $app->name
                     ));
                 }
@@ -18,7 +18,8 @@
             die(view("layout.html", array(
                 "content" => view("home.html", array(
                     "appsMarkup" => $appsMarkup
-                ))
+                )),
+                "nav" => view("nav.html")
             )));
         }
     }
