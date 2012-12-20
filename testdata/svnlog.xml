@@ -1,0 +1,173 @@
+<?xml version="1.0"?>
+<log>
+<logentry
+   revision="12">
+<author>krasimir</author>
+<date>2012-11-01T08:16:48.221415Z</date>
+<paths>
+<path
+   action="M"
+   kind="file">/notes/css/styles.css</path>
+<path
+   action="M"
+   kind="file">/notes/index.html</path>
+</paths>
+<msg>Updating the notes</msg>
+</logentry>
+<logentry
+   revision="11">
+<author>krasimir</author>
+<date>2012-10-30T14:30:54.675056Z</date>
+<paths>
+<path
+   kind="file"
+   action="M">/notes/index.html</path>
+</paths>
+<msg>fixing duplication of an example div</msg>
+</logentry>
+<logentry
+   revision="10">
+<author>krasimir</author>
+<date>2012-10-29T10:34:19.948774Z</date>
+<paths>
+<path
+   kind="file"
+   action="A">/css/bootstrap.min.css</path>
+<path
+   kind="dir"
+   action="A">/notes/css</path>
+<path
+   action="A"
+   kind="file">/notes/js/script.js</path>
+<path
+   action="A"
+   kind="file">/css/prettify.css</path>
+<path
+   action="A"
+   kind="file">/notes/js/prettify.js</path>
+<path
+   action="A"
+   kind="dir">/css</path>
+<path
+   kind="dir"
+   action="A">/notes</path>
+<path
+   kind="file"
+   action="A">/notes/css/styles.css</path>
+<path
+   kind="file"
+   action="A">/notes/notes.txt</path>
+<path
+   kind="file"
+   action="A">/notes/js/jquery.js</path>
+<path
+   action="A"
+   kind="file">/css/styles.css</path>
+<path
+   action="A"
+   kind="file">/notes/index.html</path>
+<path
+   action="A"
+   kind="dir">/notes/img</path>
+<path
+   action="A"
+   kind="dir">/notes/js</path>
+<path
+   kind="file"
+   action="A">/notes/css/bootstrap.min.css</path>
+<path
+   kind="file"
+   action="A">/notes/img/arrow_down.png</path>
+<path
+   kind="file"
+   action="A">/notes/css/prettify.css</path>
+</paths>
+<msg>fixing svn</msg>
+</logentry>
+<logentry
+   revision="9">
+<author>krasimir</author>
+<date>2012-10-29T10:33:18.286975Z</date>
+<paths>
+<path
+   kind="dir"
+   action="D">/css</path>
+<path
+   action="D"
+   kind="dir">/notes</path>
+</paths>
+<msg>fixing svn</msg>
+</logentry>
+<logentry
+   revision="8">
+<author>krasimir</author>
+<date>2012-10-29T10:29:10.117756Z</date>
+<paths>
+<path
+   action="A"
+   kind="file">/notes/notes.txt</path>
+<path
+   action="A"
+   kind="file">/notes/index.html</path>
+<path
+   action="A"
+   kind="dir">/notes</path>
+</paths>
+<msg>Adding notes</msg>
+</logentry>
+<logentry
+   revision="7">
+<author>krasimir</author>
+<date>2012-10-12T08:36:09.445259Z</date>
+<paths>
+<path
+   kind="file"
+   action="M">/index.html</path>
+</paths>
+<msg>Fixing typos</msg>
+</logentry>
+<logentry
+   revision="6">
+<author>krasimir</author>
+<date>2012-10-12T08:30:06.810807Z</date>
+<paths>
+<path
+   action="M"
+   kind="file">/index.html</path>
+</paths>
+<msg>Adding sys admin section</msg>
+</logentry>
+<logentry
+   revision="5">
+<author>krasimir</author>
+<date>2012-10-11T20:05:18.383199Z</date>
+<paths>
+<path
+   kind="file"
+   action="M">/index.html</path>
+</paths>
+<msg>Changes</msg>
+</logentry>
+<logentry
+   revision="4">
+<author>krasimir</author>
+<date>2012-10-10T05:08:30.768473Z</date>
+<paths>
+<path
+   kind="file"
+   action="M">/index.html</path>
+</paths>
+<msg>adding SimpleTest link</msg>
+</logentry>
+<logentry
+   revision="3">
+<author>krasimir</author>
+<date>2012-10-10T04:57:51.956557Z</date>
+<paths>
+<path
+   action="M"
+   kind="file">/index.html</path>
+</paths>
+<msg>Adding link for TDD in PHP</msg>
+</logentry>
+</log>

@@ -15,8 +15,7 @@
         "name" => "type", 
         "label" => "Type:",
         "options" => array(
-            "svn" => "SVN",
-            "git" => "GIT"
+            "svn" => "SVN"
         )
     ))
     ->addTextBox(array(
@@ -24,7 +23,7 @@
         "label" => "Username:",
         "validation" => Former::validation()->NotEmpty()
     ))
-    ->addTextBox(array(
+    ->addPasswordBox(array(
         "name" => "pass", 
         "label" => "Password:",
         "validation" => Former::validation()->NotEmpty()
@@ -69,7 +68,7 @@
                         $mysql->apps->save($record);
                         die(view("layout.html", array(
                             "content" => view("application.html", array(
-                                "form" => "The application is saved successfully.",
+                                "form" => view("success.html", array("message" => "The application is saved successfully.")).$form->markup,
                                 "revisions" => $this->revisions($record),
                                 "releases" => $this->releases($record),
                                 "id" => $id
@@ -97,20 +96,12 @@
 
         }
         private function revisions($app) {
-
-            $destination = __DIR__."/..".$app->destination;            
-            
             switch($app->type) {
                 case "svn":
-                    if(!file_exists($destination.".svn")) {
-                        $output = array();
-                        // $cmd = "svn checkout --non-interactive --force ".$app->source." ".$destination." --username ".$app->user." --password ".$app->pass;
-                        // exec($cmd, $output);
-                        // var_dump($output);die();
-                    }
+                    $svn = new SVN($app);
+                    return $svn->revisions();
                 break;
             }
-
         }
         private function releases($app) {
 

@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<info>
+<entry
+   path="."
+   revision="12"
+   kind="dir">
+<url>http://svn.east.fi/east_procedures</url>
+<repository>
+<root>http://svn.east.fi/east_procedures</root>
+<uuid>1ee428a2-6c6c-4606-a3d2-3b4e894467a0</uuid>
+</repository>
+<wc-info>
+<schedule>normal</schedule>
+<depth>infinity</depth>
+</wc-info>
+<commit
+   revision="12">
+<author>krasimir</author>
+<date>2012-11-01T08:16:48.221415Z</date>
+</commit>
+</entry>
+</info>

@@ -1,0 +1,21 @@
+<tr>
+    <td>{revision}</td>
+    <td>{author}</td>
+    <td>{message}</td>
+    <td>{date}</td>
+    <td>{action-release}</td>
+    <td><a href="javascript:showRevision{revision}();" class="btn">details</a><td>
+</tr>
+<tr style="display:none;" id="revision{revision}">
+    <td colspan="10"><pre>{files}</pre></td>
+<tr>
+<script type="text/javascript">
+    function showRevision{revision}() {
+        var revisionRow = $("#revision{revision}");
+        if(revisionRow.css("display") == "none") {
+            revisionRow.css("display", "table-row");
+        } else {
+            revisionRow.css("display", "none");
+        }
+    }
+</script>

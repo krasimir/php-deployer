@@ -16,7 +16,8 @@
     );
     $F->loadResource(
         "controllers/*",
-        "config/*"
+        "config/*",
+        "helpers/*"
     );
 
     // configuration of the template engine and Former
@@ -55,6 +56,7 @@
     ->register("/apps/add", array("RequireLogin", "Applications"))
     ->register("/apps/@id", array("RequireLogin", "Applications"))
     ->register("/logout", "Logout")
+    ->register("/cmd", "Command")
     ->register("", array("RequireLogin", "Home"))
     ->run();
 
