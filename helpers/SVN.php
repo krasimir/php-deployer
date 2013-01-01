@@ -25,7 +25,7 @@
                     "message" => "The destination, <strong>".$this->destination."</strong> doesn't have <strong>.svn</strong> folder, which probably means that there is no SVN initialized there.<br /><br />".view("form.command.html", array(
                         "cmd" => $cmd,
                         "cmdPreview" => $cmdPreview,
-                        "callback" => "/apps/".$this->app->id,
+                        "callback" => "apps/".$this->app->id,
                         "label" => "Perform 'svn checkout'"
                     ))
                 ));
@@ -83,7 +83,7 @@
                         "action-release" => view("form.command.html", array(
                             "cmd" => isset($attributes->revision) ? "cd ".$this->destination." && svn update --non-interactive --force -r ".$attributes->revision." --username ".$this->app->user." --password ".$this->app->pass.($this->app->afterRelease != "" ? " && ".$this->app->afterRelease : "") : "",
                             "cmdPreview" => "svn update -r ".$attributes->revision.($this->app->afterRelease != "" ? "<br />".$this->app->afterRelease : ""),
-                            "callback" => "/apps/".$this->app->id,
+                            "callback" => "apps/".$this->app->id,
                             "label" => "release"
                         ))
                     ));
