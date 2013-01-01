@@ -22,6 +22,9 @@
 
     // configuration of the template engine and Former
     View::$root = __DIR__."/templates/";
+    View::$forEachView = array(
+        "siteURL" => DEPLOYER_URL
+    );
     Former::templatesPath(__DIR__."/templates/former/");
 
     // database

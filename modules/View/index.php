@@ -3,6 +3,7 @@
     class View {
     
         public static $root = "";
+        public static $forEachView;
     
         // caching mechanism
         private static $cache;
@@ -46,6 +47,9 @@
         public function __toString() {
             // adding assigned variabls
             $output = $this->tplFileContent;
+            if(isset(View::$forEachView)) {
+                $this->vars = array_merge($this->vars, View::$forEachView);
+            }
             foreach($this->vars as $key => $value) {
                 $output = str_replace("{".$key."}", $value, $output);
             }
