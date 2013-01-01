@@ -4,7 +4,7 @@
 
         public function __construct($params) {
             SessionManager::destroy();
-            header("Location: /");
+            header("Location: ".DEPLOYER_URL);
         }
 
     }
