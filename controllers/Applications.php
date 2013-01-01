@@ -46,7 +46,7 @@
 
             switch($rule->pattern) {
                 case "/apps/add":
-                    $form = Former::get("app-form")->url("/apps/add");
+                    $form = Former::get("app-form")->url(DEPLOYER_URL."apps/add");
                     if($form->submitted && $form->success) {
                         $record = $form->data;
                         $mysql->apps->save($record);
@@ -65,7 +65,7 @@
                     $id = $params["id"];
                     $record = $mysql->apps->where("id='".$id."'")->get();
                     $record = $record[0];
-                    $form = Former::get("app-form", $record)->url("/apps/".$id);
+                    $form = Former::get("app-form", $record)->url(DEPLOYER_URL."apps/".$id);
                     if($form->submitted && $form->success) {
                         $record = $form->data;
                         $record->id = $id;
