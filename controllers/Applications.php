@@ -1,6 +1,6 @@
 <?php
 
-    Former::register("app-form", "/")
+    Former::register("app-form", DEPLOYER_URL)
     ->addTextBox(array(
         "name" => "name", 
         "label" => "Name of the application:",

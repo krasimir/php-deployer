@@ -15,8 +15,8 @@
         "Former"
     );
     $F->loadResource(
-        "controllers/*",
         "config/*",
+        "controllers/*",
         "helpers/*"
     );
 

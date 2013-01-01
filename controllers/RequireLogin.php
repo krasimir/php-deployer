@@ -1,6 +1,6 @@
 <?php
 
-    Former::register("login-form", "/")
+    Former::register("login-form", DEPLOYER_URL)
     ->addTextBox(array(
         "name" => "username", 
         "label" => "Username:",
