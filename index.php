@@ -38,15 +38,8 @@
         "type" => "VARCHAR(50)",
         "user" => "VARCHAR(150)",
         "pass" => "VARCHAR(150)",
-        "destination" => "LONGTEXT"
-    ))
-    ->defineContext("releases", array(
-        "app" => "INT",
-        "revision" => "VARCHAR(250)",
-        "description" => "LONGTEXT",
-        "filesChanged" => "LONGTEXT",
-        "date" => "VARCHAR(150)",
-        "user" => "VARCHAR(150)"
+        "destination" => "LONGTEXT",
+        "afterRelease" => "LONGTEXT"
     ));
 
     // routing

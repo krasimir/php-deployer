@@ -32,6 +32,10 @@
         "name" => "destination", 
         "label" => "Destination (where to deploy the code):",
         "validation" => Former::validation()->NotEmpty()
+    ))
+    ->addTextArea(array(
+        "name" => "afterRelease", 
+        "label" => "Command after release:"
     ));
 
     class Applications {
@@ -70,7 +74,6 @@
                             "content" => view("application.html", array(
                                 "form" => view("success.html", array("message" => "The application is saved successfully.")).$form->markup,
                                 "revisions" => $this->revisions($record),
-                                "releases" => $this->releases($record),
                                 "id" => $id
                             )),
                             "nav" => view("nav.html")
@@ -80,7 +83,6 @@
                             "content" => view("application.html", array(
                                 "form" => $form->markup,
                                 "revisions" => $this->revisions($record),
-                                "releases" => $this->releases($record),
                                 "id" => $id
                             )),
                             "nav" => view("nav.html")
@@ -102,9 +104,6 @@
                     return $svn->revisions();
                 break;
             }
-        }
-        private function releases($app) {
-
         }
     }
 ?>
