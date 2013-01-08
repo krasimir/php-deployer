@@ -52,7 +52,7 @@
     ->register("/apps/add", array("RequireLogin", "Applications"))
     ->register("/apps/@id", array("RequireLogin", "Applications"))
     ->register("/logout", "Logout")
-    ->register("/cmd", "Command")
+    ->register("/cmd", array("RequireLogin", "Command"))
     ->register("", array("RequireLogin", "Home"))
     ->run();
 
