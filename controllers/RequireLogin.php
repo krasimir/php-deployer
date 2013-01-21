@@ -20,7 +20,7 @@
                 $form = Former::get("login-form");
                 if($form->data->username && $form->data->password) {
                     foreach ($USERS as $user) {
-                        if($user->username === $form->data->username && $user->password === $form->data->username) {
+                        if($user->username === $form->data->username && $user->password === $form->data->password) {
                             SessionManager::write("php-deployer-user", $user->username);
                             return true;
                         }
