@@ -2,7 +2,7 @@
 
     global $USERS;
     $USERS = array(
-        (object) array("username" => "admin", "password" => "admin")
+        (object) array("username" => "admin", "password" => "password")
     );
 
 ?>
