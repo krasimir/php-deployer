@@ -81,7 +81,7 @@
                         "date" => isset($entry->date) ? $entry->date : "",
                         "files" => $files,
                         "action-release" => view("form.command.html", array(
-                            "cmd" => isset($attributes->revision) ? "cd ".$this->destination." && svn update --non-interactive --force -r ".$attributes->revision." --username ".$this->app->user." --password ".$this->app->pass.($this->app->afterRelease != "" ? " && ".$this->app->afterRelease : "") : "",
+                            "cmd" => isset($attributes->revision) ? "cd ".$this->destination." && svn update --non-interactive --force -r ".$attributes->revision." --username ".$this->app->user." --password ".$this->app->pass." 2>&1".($this->app->afterRelease != "" ? " && ".$this->app->afterRelease : "") : "",
                             "cmdPreview" => "svn update -r ".$attributes->revision.($this->app->afterRelease != "" ? "<br />".$this->app->afterRelease : ""),
                             "callback" => "apps/".$this->app->id,
                             "label" => "release"
