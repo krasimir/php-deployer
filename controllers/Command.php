@@ -7,7 +7,7 @@
                 die(view("layout.html", array(
                     "content" => view("cmd.result.html", array(
                         "cmd" => $params["cmdPreview"],
-                        "result" => $shell->toString(),
+                        "result" => $shell->toString()."<br /><br />Result:<br />".$shell->result(),
                         "callback" => $params["callback"]
                     )),
                     "nav" => view("nav.html")
