@@ -158,7 +158,7 @@ Available validators:
 ## Custom html templates
 If you need to change the html markup or just to add new logic copy the content of *tpl* directory in a new place. After that just set the new path like that:
 
-    Former::templatesPath(__DIR__."/");
+    Former::templatesPath(dirname(__FILE__)."/");
 
 ## CSS styles
 The generated markup require some CSS to look good. It is available in *css* directory.

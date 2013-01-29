@@ -7,7 +7,7 @@
 
         public function __construct($app) {
             $this->app = $app;
-            $this->destination = __DIR__."/..".$app->destination;
+            $this->destination = dirname(__FILE__)."/..".$app->destination;
         }
         public function revisions() {
 
@@ -36,7 +36,7 @@
             // Getting current revesion
             $shell = new Shell("cd ".$this->destination." && svn info --xml --username ".$this->app->user." --password ".$this->app->pass);
             $result = $shell->toString();
-            // $result = file_get_contents(__DIR__."/../testdata/svninfo.xml"); // for testing purpose
+            // $result = file_get_contents(dirname(__FILE__)."/../testdata/svninfo.xml"); // for testing purpose
             $xml = simplexml_load_string($result);
             $currentRevision = 1;
             if(isset($xml->entry)) {
@@ -50,7 +50,7 @@
             $cmd = "cd ".$this->destination." && svn log -v -r ".$startFromRevision.":HEAD --non-interactive --xml --with-all-revprops --username ".$this->app->user." --password ".$this->app->pass;
             $shell = new Shell($cmd);
             $result = $shell->toString();
-            // $result = file_get_contents(__DIR__."/../testdata/svnlog.xml"); // for testing purpose
+            // $result = file_get_contents(dirname(__FILE__)."/../testdata/svnlog.xml"); // for testing purpose
             $xml = simplexml_load_string($result);
             $revisionsRows = array();
             $revisionsMarkup .= '<table class="table table-bordered">';

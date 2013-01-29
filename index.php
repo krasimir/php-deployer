@@ -2,7 +2,7 @@
 
     session_start();
 
-    require(__DIR__."/fabrico/fabrico.php");
+    require(dirname(__FILE__)."/fabrico/fabrico.php");
 
     // modules + resources
     global $F;
@@ -21,11 +21,11 @@
     );
 
     // configuration of the template engine and Former
-    View::$root = __DIR__."/templates/";
+    View::$root = dirname(__FILE__)."/templates/";
     View::$forEachView = array(
         "siteURL" => DEPLOYER_URL
     );
-    Former::templatesPath(__DIR__."/templates/former/");
+    Former::templatesPath(dirname(__FILE__)."/templates/former/");
 
     // database
     $mysql = new MySQLAdapter((object) array(

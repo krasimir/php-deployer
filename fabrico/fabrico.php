@@ -440,10 +440,10 @@
             public function __construct() {
                 $this->loaded = (object) array();
                 $this->rootPath = $this->getPath(2);
-                if(!file_exists(__DIR__."/".FABRICO_LOADER_CACHE_FILE)) {
+                if(!file_exists(dirname(__FILE__)."/".FABRICO_LOADER_CACHE_FILE)) {
                     $this->updateCache();
                 }
-                require(__DIR__."/".FABRICO_LOADER_CACHE_FILE);
+                require(dirname(__FILE__)."/".FABRICO_LOADER_CACHE_FILE);
             }
             public function loaded() {
                 return $this->loaded;
@@ -538,8 +538,8 @@
                 $content .= 'global $FABRICO_TREE; ';
                 $content .= '$FABRICO_TREE = json_decode(\''.json_encode($FABRICO_TREE).'\');';
                 $content .= ' ?>';
-                file_put_contents(__DIR__."/".FABRICO_LOADER_CACHE_FILE, $content);
-                chmod(__DIR__."/".FABRICO_LOADER_CACHE_FILE, 0777);
+                file_put_contents(dirname(__FILE__)."/".FABRICO_LOADER_CACHE_FILE, $content);
+                chmod(dirname(__FILE__)."/".FABRICO_LOADER_CACHE_FILE, 0777);
             }
             private function readDir($dir, $obj) {
                 if ($handle = @opendir($dir)) {

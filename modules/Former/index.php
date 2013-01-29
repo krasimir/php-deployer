@@ -10,7 +10,7 @@
         public static function register($key, $url, $method = "POST") {
             if(!isset(self::$forms)) self::$forms = (object) array();
             if(FormerView::$root == "") {
-                Former::templatesPath(__DIR__."/tpl/");
+                Former::templatesPath(dirname(__FILE__)."/tpl/");
             }
             return self::$forms->$key = new FormerForm($url, $method, $key);
         }
